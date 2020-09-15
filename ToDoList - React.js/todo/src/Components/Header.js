@@ -1,9 +1,9 @@
 import React from 'react'
 import '../App.css'
 
-function Header () {
+const Header = () => {
     return(
-        <header style={styling}>
+        <header style={ styling }>
             <h1>TodoList</h1>
         </header>
     )

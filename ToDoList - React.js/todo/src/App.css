@@ -6,6 +6,11 @@
   outline: none;
 }
 
+.container {
+  width:90%;
+  margin: 0 auto;
+}
+
 header {
   color:'#fff';
   background: '#333';
@@ -25,11 +30,6 @@ header {
     font-size:20px;
     width:90%;
     border:2px solid #333;
-}
-
-.App {
-  width:90%;
-  margin: 0 auto;
 }
 
 .btn {
@@ -63,6 +63,7 @@ header {
   color:#fff;
   border-radius: 15px;
 }
+
 .todos {
   border-collapse: collapse;
   width:100%;
@@ -129,7 +130,7 @@ input[type='checkbox'] {
 }
 
 @media only screen and (max-width: 600px) {
-  .App {
+  .container {
     width: 100%;
   }
   .item:nth-child(odd) {
@@ -138,7 +139,6 @@ input[type='checkbox'] {
   .addTodo {
     width: 80%;
   }
-
   .btn-sub {
     width: 20%;
   }

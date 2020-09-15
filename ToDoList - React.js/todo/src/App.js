@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'
-import Todos from './Components/Todos'
-import Header from './Components/Header'
-import AddTodo from './Components/AddTodo'
+import { AddTodo, Todos, Header } from './Components'
 import { v4 as uuidv4 } from 'uuid'
 
 export default class App extends Component {
@@ -13,6 +11,7 @@ export default class App extends Component {
       todos : []
     }
   }
+
   componentDidMount() {
     this.getLocalStorage();
   }
@@ -57,13 +56,14 @@ export default class App extends Component {
   }
 
   render() {
+    const { todos } = this.state;
   return (
-    <div className="App">
+    <div className="container">
       <Header /> 
         <AddTodo addTask = { this.addTask }/>
-        <Todos todos = {this.state.todos} markComplete = { this.markComplete } 
-          removeTask = {this.removeTask}
-      />
+        <Todos todos = { todos } 
+          markComplete = { this.markComplete } 
+          removeTask = { this.removeTask } />
     </div>
   );
 }
